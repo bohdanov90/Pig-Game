@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box; }
+
+.wrapper {
+  max-width: 1920px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  background-color: grey;
+  font-family: "Noto Serif", serif; }
+
+.aside {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  padding: 20px; }
+
+.main {
+  width: 80%;
+  display: flex;
+  flex-direction: column; }
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 40px; }
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.players-section {
+  display: flex;
+  justify-content: center; }
+
+.player-1-section {
+  width: 100%;
+  min-height: 60vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  padding: 30px; }
+
+.player-section_is-not-active {
+  opacity: 0.4; }
+
+.player-1-section__player-1-name {
+  font-size: 30px;
+  margin: 20px; }
+
+.player-1-total-score {
+  font-size: 25px;
+  margin: 20px; }
+
+.player-1-current-score {
+  font-size: 25px;
+  margin: 20px; }
+
+.images-player-1, .images-player-2 {
+  display: flex;
+  justify-content: center; }
+
+.buttons-section {
+  display: flex;
+  justify-content: center; }
+
+.buttons-section__roll-dice-player-1, .buttons-section__roll-dice-player-2 {
+  padding: 10px;
+  margin: 20px; }
+
+.buttons-section__hold-points-player-1, .buttons-section__hold-points-player-2 {
+  padding: 10px;
+  margin: 20px; }
+
+.player-2-section {
+  width: 100%;
+  min-height: 60vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  padding: 30px; }
+
+.player-2-section__player-2-name {
+  font-size: 30px;
+  margin: 20px; }
+
+.player-2-total-score {
+  font-size: 25px;
+  margin: 20px; }
+
+.player-2-current-score {
+  font-size: 25px;
+  margin: 20px; }
+
+.footer {
+  width: 100%; }
+
+/*# sourceMappingURL=styles.css.map */

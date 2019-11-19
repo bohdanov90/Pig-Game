@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-US"> 
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Needed for Responsive Web Design -->
+    <title> Pig Game </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif">
+    <script src="https://kit.fontawesome.com/19e2f65e12.js" crossorigin="anonymous"></script> <!-- This code is for using Font Awesome icons -->
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <aside class="aside">
+        <div class="aside__how-to-play">How to Play</div>
+        <div class="aside__start-new-game">Start New Game</div>
+        <div class="aside__set-final-score">Set Final Score</div>
+        <div class="aside__set-names">Set Players' Names</div>
+        <div class="aside__set-colors">Set Players' Color</div>
+      </aside>
+
+      <main class="main">
+
+        <header class="header">Pig Game</header>
+        
+        <div class="players-section">
+
+          <div class="player-1-section">
+
+            <div class="player-1-section__player-1-name">Player 1</div>
+            <div class="player-1-total-score">
+              <span class="player-1-total-score__label">Total Score:</span>
+              <span class="player-1-total-score__value" id="player-1-total-score">45</span>
+            </div>
+            <div class="player-1-current-score">
+                <span class="player-1-current-score__label">Current Score:</span>
+                <span class="player-1-current-score__value" id="player-1-current-score">12</span>
+            </div>
+            
+            <div class="images-player-1"><img src="images/dice-1.png" alt="" class="image-dice-player-1" width="100px"></div>
+
+            <div class="buttons-section">
+              <span class="buttons-section__roll-dice-player-1"><button id="player-1-roll-dice-button">Roll Dice</button></span>
+              <span class="buttons-section__hold-points-player-1"><button id="player-1-hold-points-button">Hold Points</button></span>
+            </div>
+
+          </div>
+
+          <div class="player-2-section player-section_is-not-active">
+
+            <div class="player-2-section__player-2-name">Player 2</div>
+            <div class="player-2-total-score">
+              <span class="player-2-total-score__label">Total Score:</span>
+              <span class="player-2-total-score__value" id="player-2-total-score">58</span>
+            </div>
+            <div class="player-2-current-score">
+              <span class="player-2-current-score__label">Current Score:</span>
+              <span class="player-2-current-score__value" id="player-2-current-score">0</span>
+            </div>
+
+            <div class="images-player-1"><img src="images/dice-1.png" alt="" class="image-dice-player-2" width="100px"></div>
+  
+            <div class="buttons-section">
+              <span class="buttons-section__roll-dice-player-2 buttons-section_disabled"><button id="player-2-roll-dice-button">Roll Dice</button></span>
+              <span class="buttons-section__hold-points-player-2 buttons-section_disabled"><button id="player-2-hold-points-button">Hold Points</button></span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <footer class="footer"></footer>
+
+      </main>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
