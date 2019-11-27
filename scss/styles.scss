@@ -1,145 +1,292 @@
+$bgcolor-main: #F8E7B1;
+$bgcolor-secondary: #BFA479;
+$color-main: #5f5f5f;
+$color-hover: #676767;
+$color-winner: #b22222;
+
+@mixin flex-column-centered() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@mixin flex-row-centered() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  max-width: 1920px;
-  min-height: 100vh;
-  margin: auto;
-  display: flex;
-  font-family: "Noto Serif", serif;
-  background-image: url(../images/background-5.jpg);
-  background-color: #808080;
-}
-
-.aside {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  padding: 160px 20px 20px 20px;
-  color: #f4d2c6;
-  font-size: 24px;
-  line-height: 130px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  // background-image: url(../images/background-5.jpg);
-  // background-color: #808080;
+  background: url(../images/background.jpg) $bgcolor-main;
+  font: {
+    family: "Noto Serif", serif;
+    size: 0.75vw;
+  }
+  height: 100vh;
+  width: 100vw;
+  @include flex-column-centered();
 }
 
   .header {
-    width: 100%;
+    font-size: 1.75vw;
+    height: 15%;
     text-align: center;
-    padding: 20px;
-    font-size: 40px;
-  }
-
-  .section {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @include flex-column-centered();
   }
 
-    .players-section {
-      display: flex;
-      justify-content: center;
-   
+    h1 {
+      margin: 0 0;
     }
 
-      .player-1-section {
-        width: 100%;
-        min-height: 60vh; 
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        background-color: #85c2c5;
-        padding: 30px;
-      }
+  .players-section {
+    height: 70%;
+    width: 80%;
+    @include flex-row-centered();
+  }
+  
+    .player-1-section, 
+    .player-2-section {
+      background-color: transparent;
+      height: 100%;
+      padding: 1vh 1vw;
+      text-align: center;
+      width: 50%;
+      @include flex-column-centered();
+    }
 
-      .player-section_is-active {
-        opacity: 0.95;
-        font-size: 150%;
-      }
+    .player-section_is-active {
+      font-weight: 600;
+      opacity: 1;
+    }
 
-      /* .player-section_is-active::after {
-        content: "\2022";
-      }*/
-      
-      .player-section_is-not-active {
-        opacity: 0.4;
-      }
+    .player-section_is-not-active {
+      opacity: 0.2;
+    }
 
-      .player-section_is-winner {
-        color: red;
-        font-weight: 600;
-      }
+    .player-section_is-winner {
+      color: $color-winner;
+      font-weight: 600;
+    }
 
-        .player-1-section__player-1-name {
-          font-size: 30px;
-          margin: 20px;
-        }
-
-        .player-1-total-score {
-          font-size: 25px;
-          margin: 20px;
-        }
-
-        .player-1-current-score {
-          font-size: 25px;
-          margin: 20px;
-        }
-
-                              .images-player-1, .images-player-2 {
-                                display: flex;
-                                justify-content: center;
-                              }
-                            
-                              .buttons-section {
-                              
-                                display: flex;
-                                justify-content: center;
-                              }
-
-                              .buttons-section__roll-dice-player-1, .buttons-section__roll-dice-player-2, {
-                                padding: 10px;
-                                margin: 20px;
-         
-                              }
-                        
-                              .buttons-section__hold-points-player-1, .buttons-section__hold-points-player-2, {
-                                padding: 10px;
-                                margin: 20px;
-                              }
-
-      .player-2-section {
-        width: 100%;
-        min-height: 60vh;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        background-color: #85c2c5;
-        padding: 30px;  
-      }
-
+      .player-1-section__player-1-name, 
       .player-2-section__player-2-name {
-        font-size: 30px;
-        margin: 20px;
+        font-size: 2.5vw;
+        height: 15%; 
+        margin: 1vh 1vw;
+        text-decoration: underline;
+        @include flex-row-centered();
       }
 
-      .player-2-total-score {
-        font-size: 25px;
-        margin: 20px;
-      }
-
+      .player-1-total-score, 
+      .player-2-total-score, 
+      .player-1-current-score, 
       .player-2-current-score {
-        font-size: 25px;
-        margin: 20px;
+        height: 15%; 
+        margin: 1vh 1vw;
+        @include flex-row-centered();
       }
+
+      .player-1-total-score, 
+      .player-2-total-score {
+        font-size: 2vw;
+      }
+
+      .player-1-current-score, 
+      .player-2-current-score {
+        font-size: 1.5vw;
+      }
+
+        .player-1-total-score__label, 
+        .player-2-total-score__label, 
+        .player-1-current-score__label, 
+        .player-2-current-score__label {
+          margin-right: 0.25vw;
+        }
+
+      .images-player-1, 
+      .images-player-2 {
+        height: 40%;
+        @include flex-row-centered();
+      }
+
+      .images_is-visible {
+        visibility: visible;
+      }
+
+      .images_is-hidden {
+        visibility: hidden;
+      }
+      
+        .images-player-1__dice-1, 
+        .images-player-1__dice-2, 
+        .images-player-2__dice-1, 
+        .images-player-2__dice-2 {
+          height: 80%;
+          margin: auto 0;
+          padding: 0 0.5vw;
+          width: auto;
+        }
+
+      .buttons-section {
+        font-size: 1.25vw;
+        height: 15%; 
+        @include flex-row-centered();
+      }
+
+        .buttons-section__roll-dice-player-1, 
+        .buttons-section__roll-dice-player-2, 
+        .buttons-section__hold-points-player-1, 
+        .buttons-section__hold-points-player-2 {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          margin: 1vh 1vw;
+          padding: 1vh 1vw;
+        }
+        
+        .buttons-section__roll-dice-player-1:hover, 
+        .buttons-section__roll-dice-player-2:hover, 
+        .buttons-section__hold-points-player-1:hover, 
+        .buttons-section__hold-points-player-2:hover {
+          color: $color-hover;
+          font-weight: 800;
+        }
+
+        .buttons-section__roll-dice-player-1:focus, 
+        .buttons-section__roll-dice-player-2:focus, 
+        .buttons-section__hold-points-player-1:focus, 
+        .buttons-section__hold-points-player-2:focus {
+          outline: none;
+        }
 
   .footer {
+    height: 15%;
     width: 100%;
   }
 
+    .footer__set-final-score {
+      background-color: $bgcolor-main;
+      bottom: 11vh;
+      cursor: pointer;
+      font-size: 1.5vw;
+      height: 5%;
+      left: 50%;
+      position: absolute;
+      text-align: center;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 10%;
+    }
+      
+    .footer__set-final-score:active, 
+    .footer__set-final-score:hover {
+      background-color: $bgcolor-secondary;	
+      color: $color-hover;
+    }
+
+    .footer-buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 1.5vw;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      padding: 3vh 3vw;
+    }
+    
+      .footer-buttons__start-new-game, 
+      .footer-buttons__how-to-play {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 1vh 1vw;
+        padding: 1vh 1vw;
+        text-decoration: underline;
+      }
+
+      .footer-buttons__start-new-game:hover, 
+      .footer-buttons__how-to-play:hover {
+        color: $color-hover;
+        cursor: pointer;
+        font-weight: 800;
+      }
+
+      .footer-buttons__start-new-game:focus, 
+      .footer-buttons__how-to-play:focus {
+        outline: none;
+      }
+
+        .how-to-play-modal-box-container {
+          bottom: 2.5vw;
+          left: 2vw;
+          right: 2vw;
+          position: fixed;
+          top: 2.5vw;
+          z-index: 1;
+        }
+
+        .how-to-play-modal-box-container_is-visible {
+          visibility: visible;
+        }  
+        
+        .how-to-play-modal-box-container_is-hidden {
+          visibility: hidden;
+        }
+
+          .how-to-play-modal-box-content {
+            background: url(../images/background.jpg) $bgcolor-main;
+            border: 1px solid $color-main;
+            font-size: 1vw;
+            height: 75vh;
+            margin: 9vh 7vw;
+            overflow: auto;
+            padding: 2vh 2vw;
+          }
+
+            ul {
+              list-style-type: disc;
+            }
+
+            .how-to-play-modal-box-content__close-button {
+              color: $color-main;
+              float: right;
+              font: {
+                size: 2.5vw;
+                weight: 700;
+              }
+            }
+
+              #close-button:hover {
+                -webkit-animation: fa-spin 2s infinite linear;
+                        animation: fa-spin 2s infinite linear;
+              }
+
+            .how-to-play-modal-box-content__close-button:hover, 
+            .how-to-play-modal-box-content__close-button:focus {
+              color: $color-hover;
+              cursor: pointer;
+              text-decoration: none;
+            }
