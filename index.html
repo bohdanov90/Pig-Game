@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for Responsive Web Design -->
+    <title>Pig Game</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif">
+    <script src="https://kit.fontawesome.com/19e2f65e12.js" crossorigin="anonymous"></script> <!-- for Font Awesome icons -->
+  </head>
+
+  <body>
+    <main class="main">
+      <header class="header"><h1>Pig Game</h1></header>
+      <div class="players-section">
+
+        <div class="player-1-section player-section_is-active"> 
+          <div class="player-1-section__player-1-name"><h2>Player 1</h2></div>
+          <div class="player-1-total-score">
+            <span class="player-1-total-score__label">Total Score:</span>
+            <span class="player-1-total-score__value" id="player-1-total-score">45</span>
+          </div>
+          <div class="player-1-current-score">
+              <span class="player-1-current-score__label">Current Score:</span>
+              <span class="player-1-current-score__value" id="player-1-current-score">12</span>
+          </div>
+          <div class="images-player-1 images_is-visible">
+            <img src="images/dice-1.png" alt="" class="images-player-1__dice-1">
+            <img src="images/dice-2.png" alt="" class="images-player-1__dice-2">
+          </div>
+          <div class="buttons-section">
+            <button id="player-1-roll-dice-button" class="buttons-section__roll-dice-player-1"><i class="fas fa-dice"></i> Roll Dice</button>
+            <button id="player-1-hold-points-button" class="buttons-section__hold-points-player-1"><i class="fas fa-star"></i> Hold Points</button>
+          </div>
+        </div>
+
+        <div class="player-2-section player-section_is-not-active">
+          <div class="player-2-section__player-2-name"><h2>Player 2</h2></div>
+          <div class="player-2-total-score">
+            <span class="player-2-total-score__label">Total Score:</span>
+            <span class="player-2-total-score__value" id="player-2-total-score">58</span>
+          </div>
+          <div class="player-2-current-score">
+            <span class="player-2-current-score__label">Current Score:</span>
+            <span class="player-2-current-score__value" id="player-2-current-score">0</span>
+          </div>
+          <div class="images-player-2 images_is-hidden">
+            <img src="images/dice-1.png" alt="" class="images-player-2__dice-1">
+            <img src="images/dice-2.png" alt="" class="images-player-2__dice-2">
+          </div>
+          <div class="buttons-section">
+            <button id="player-2-roll-dice-button" class="buttons-section__roll-dice-player-2 buttons-section_disabled"><i class="fas fa-dice"></i> Roll Dice</button>
+            <button id="player-2-hold-points-button" class="buttons-section__hold-points-player-2 buttons-section_disabled"><i class="fas fa-star"></i> Hold Points</button>
+          </div>
+        </div>
+
+      </div>
+      <footer class="footer">
+        <input type="text" placeholder="Final Score" class="footer__set-final-score">
+        <div class="footer-buttons">
+          <button class="footer-buttons__start-new-game">Start New Game</button>
+          <button class="footer-buttons__how-to-play">How to Play</button>
+            <div class="how-to-play-modal-box-container how-to-play-modal-box-container_is-hidden">
+              <div class="how-to-play-modal-box-content">
+                <span class="how-to-play-modal-box-content__close-button"><i class="fas fa-times" id="close-button"></i></span>
+                <h2><u>RULES</u></h2>
+                <ol>
+                <li><p>This game is for 2 players. Player 1 always starts the game.</p></li>
+                <li>
+                  Every time you roll dices the sum on your dices is added to your current score unless:
+                  <ul>
+                  <li><p>you rolled 1 at least on one of the dices;</p></li>
+                  <li><p>you rolled the highest double (6+6);</p></li>
+                  </ul>
+                  If one of the conditions is met you lose your current score and turn. 
+                </li>
+                <li><p>After each roll you have a chance to add your current score to your total score by pressing "Hold Points" button.
+                    If you do so you save your scores but lose turn.</p></li>
+                <li><p>If you decided not to "Hold" your points you roll dices again and have chance to multiply your current points. 
+                    This will continue happening unless you decide to "Hold Points" or one of events from paragraph 2 happens.</p></li>
+                <li><p>Game finishes when one of the players' Total Score reaches Final Score. Final Score equals 100 points by default but you can change it.</p></li>
+                <li><p>That's it. Have fun!</p></li>
+                </ol>
+              </div>  
+            </div>
+        </div>
+      </footer>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
