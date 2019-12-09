@@ -152,5 +152,5 @@ document.querySelector(".how-to-play-modal-box-content__close-button").onclick =
 // code for execution
 newGame();
 document.querySelector(".buttons-section__roll-dice-player-" + activePlayer).addEventListener("click", pressingRollDiceButton);
-document.querySelector(".footer-buttons__start-new-game").addEventListener("click", newGame);
+document.querySelector(".footer-buttons__start-over").addEventListener("click", newGame);
 document.querySelector(".footer-buttons__how-to-play").addEventListener("click", gameRules);

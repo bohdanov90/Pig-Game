@@ -2,12 +2,12 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pig Game</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="scss/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif">
-    <script src="https://kit.fontawesome.com/19e2f65e12.js" crossorigin="anonymous"></script> <!-- for Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/19e2f65e12.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -30,8 +30,8 @@
             <img src="images/dice-2.png" alt="" class="images-player-1__dice-2">
           </div>
           <div class="buttons-section">
-            <button id="player-1-roll-dice-button" class="buttons-section__roll-dice-player-1"><i class="fas fa-dice"></i> Roll Dice</button>
-            <button id="player-1-hold-points-button" class="buttons-section__hold-points-player-1"><i class="fas fa-star"></i> Hold Points</button>
+            <button id="player-1-roll-dice-button" class="buttons-section__roll-dice-player-1"><span class="buttons-section__icons"><i class="fas fa-dice"></i></span> Roll Dice</button>
+            <button id="player-1-hold-points-button" class="buttons-section__hold-points-player-1"><span class="buttons-section__icons"><i class="fas fa-star"></i></span> Hold Points</button>
           </div>
         </div>
 
@@ -50,8 +50,8 @@
             <img src="images/dice-2.png" alt="" class="images-player-2__dice-2">
           </div>
           <div class="buttons-section">
-            <button id="player-2-roll-dice-button" class="buttons-section__roll-dice-player-2 buttons-section_disabled"><i class="fas fa-dice"></i> Roll Dice</button>
-            <button id="player-2-hold-points-button" class="buttons-section__hold-points-player-2 buttons-section_disabled"><i class="fas fa-star"></i> Hold Points</button>
+            <button id="player-2-roll-dice-button" class="buttons-section__roll-dice-player-2 buttons-section_disabled"><span class="buttons-section__icons"><i class="fas fa-dice"></i></span> Roll Dice</button>
+            <button id="player-2-hold-points-button" class="buttons-section__hold-points-player-2 buttons-section_disabled"><span class="buttons-section__icons"><i class="fas fa-star"></i></span> Hold Points</button>
           </div>
         </div>
 
@@ -59,12 +59,12 @@
       <footer class="footer">
         <input type="text" placeholder="Final Score" class="footer__set-final-score">
         <div class="footer-buttons">
-          <button class="footer-buttons__start-new-game">Start New Game</button>
+          <button class="footer-buttons__start-over">Start Over</button>
           <button class="footer-buttons__how-to-play">How to Play</button>
             <div class="how-to-play-modal-box-container how-to-play-modal-box-container_is-hidden">
               <div class="how-to-play-modal-box-content">
                 <span class="how-to-play-modal-box-content__close-button"><i class="fas fa-times" id="close-button"></i></span>
-                <h2><u>RULES</u></h2>
+                <h2 class="how-to-play-modal-box-content__heading"><u>RULES</u></h2>
                 <ol>
                 <li><p>This game is for 2 players. Player 1 always starts the game.</p></li>
                 <li>

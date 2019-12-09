@@ -1,8 +1,9 @@
 $bgcolor-main: #F8E7B1;
 $bgcolor-secondary: #BFA479;
-$color-main: #5f5f5f;
-$color-hover: #676767;
+$color-main: #353535;
+$color-hover: #646464;
 $color-winner: #b22222;
+$color-border: #90756A;
 
 @mixin flex-column-centered() {
   display: -webkit-box;
@@ -38,22 +39,22 @@ $color-winner: #b22222;
 }
 
 .main {
+  @include flex-column-centered();
   background: url(../images/background.jpg) $bgcolor-main;
+  color: $color-main;
   font: {
     family: "Noto Serif", serif;
-    size: 0.75vw;
+    size: 14px;
   }
   height: 100vh;
-  width: 100vw;
-  @include flex-column-centered();
+  min-width: 400px;
 }
 
   .header {
-    font-size: 1.75vw;
-    height: 15%;
+    @include flex-column-centered();
+    height: 20%;
     text-align: center;
     width: 100%;
-    @include flex-column-centered();
   }
 
     h1 {
@@ -61,23 +62,25 @@ $color-winner: #b22222;
     }
 
   .players-section {
-    height: 70%;
-    width: 80%;
     @include flex-row-centered();
+    height: 60%;
+    width: 80%;
   }
   
     .player-1-section, 
     .player-2-section {
+      @include flex-column-centered();
       background-color: transparent;
+      border: 1px dashed $color-border;
       height: 100%;
       padding: 1vh 1vw;
+      margin: 1vh 1vw;
       text-align: center;
       width: 50%;
-      @include flex-column-centered();
     }
 
     .player-section_is-active {
-      font-weight: 600;
+      font-weight: 700;
       opacity: 1;
     }
 
@@ -87,35 +90,24 @@ $color-winner: #b22222;
 
     .player-section_is-winner {
       color: $color-winner;
-      font-weight: 600;
+      font-weight: 700;
     }
 
       .player-1-section__player-1-name, 
       .player-2-section__player-2-name {
-        font-size: 2.5vw;
+        @include flex-row-centered();
         height: 15%; 
         margin: 1vh 1vw;
         text-decoration: underline;
-        @include flex-row-centered();
       }
 
       .player-1-total-score, 
       .player-2-total-score, 
       .player-1-current-score, 
       .player-2-current-score {
+        @include flex-row-centered();
         height: 15%; 
         margin: 1vh 1vw;
-        @include flex-row-centered();
-      }
-
-      .player-1-total-score, 
-      .player-2-total-score {
-        font-size: 2vw;
-      }
-
-      .player-1-current-score, 
-      .player-2-current-score {
-        font-size: 1.5vw;
       }
 
         .player-1-total-score__label, 
@@ -127,8 +119,8 @@ $color-winner: #b22222;
 
       .images-player-1, 
       .images-player-2 {
-        height: 40%;
         @include flex-row-centered();
+        height: 40%;
       }
 
       .images_is-visible {
@@ -143,16 +135,13 @@ $color-winner: #b22222;
         .images-player-1__dice-2, 
         .images-player-2__dice-1, 
         .images-player-2__dice-2 {
-          height: 80%;
           margin: auto 0;
           padding: 0 0.5vw;
-          width: auto;
         }
 
       .buttons-section {
-        font-size: 1.25vw;
-        height: 15%; 
         @include flex-row-centered();
+        height: 15%; 
       }
 
         .buttons-section__roll-dice-player-1, 
@@ -161,82 +150,59 @@ $color-winner: #b22222;
         .buttons-section__hold-points-player-2 {
           background-color: transparent;
           border: none;
+          color: $color-main;
           cursor: pointer;
-          margin: 1vh 1vw;
-          padding: 1vh 1vw;
-        }
-        
-        .buttons-section__roll-dice-player-1:hover, 
-        .buttons-section__roll-dice-player-2:hover, 
-        .buttons-section__hold-points-player-1:hover, 
-        .buttons-section__hold-points-player-2:hover {
-          color: $color-hover;
-          font-weight: 800;
-        }
-
-        .buttons-section__roll-dice-player-1:focus, 
-        .buttons-section__roll-dice-player-2:focus, 
-        .buttons-section__hold-points-player-1:focus, 
-        .buttons-section__hold-points-player-2:focus {
-          outline: none;
         }
 
   .footer {
-    height: 15%;
+    @include flex-row-centered();
+    height: 20%;
     width: 100%;
   }
 
     .footer__set-final-score {
       background-color: $bgcolor-main;
-      bottom: 11vh;
-      cursor: pointer;
-      font-size: 1.5vw;
-      height: 5%;
+      bottom: 11.25vh;
+      color: $color-main;
       left: 50%;
       position: absolute;
       text-align: center;
       -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
               transform: translateX(-50%);
-      width: 10%;
-    }
-      
-    .footer__set-final-score:active, 
-    .footer__set-final-score:hover {
-      background-color: $bgcolor-secondary;	
-      color: $color-hover;
     }
 
     .footer-buttons {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      font-size: 1.5vw;
+      width: 80%;
       -ms-flex-pack: distribute;
-          justify-content: space-around;
+          justify-content: center;
       padding: 3vh 3vw;
+      position: relative;
     }
     
-      .footer-buttons__start-new-game, 
+      .footer-buttons__start-over, 
       .footer-buttons__how-to-play {
         background-color: transparent;
         border: none;
+        color: $color-main;
         cursor: pointer;
         margin: 1vh 1vw;
         padding: 1vh 1vw;
         text-decoration: underline;
+        position: absolute;
       }
 
-      .footer-buttons__start-new-game:hover, 
-      .footer-buttons__how-to-play:hover {
-        color: $color-hover;
-        cursor: pointer;
-        font-weight: 800;
+      .footer-buttons__start-over {
+        left: 20px;
+        bottom: 15px;
       }
 
-      .footer-buttons__start-new-game:focus, 
-      .footer-buttons__how-to-play:focus {
-        outline: none;
+      .footer-buttons__how-to-play {
+        right: 20px;
+        bottom: 15px;
       }
 
         .how-to-play-modal-box-container {
@@ -259,7 +225,6 @@ $color-winner: #b22222;
           .how-to-play-modal-box-content {
             background: url(../images/background.jpg) $bgcolor-main;
             border: 1px solid $color-main;
-            font-size: 1vw;
             height: 75vh;
             margin: 9vh 7vw;
             overflow: auto;
@@ -273,20 +238,243 @@ $color-winner: #b22222;
             .how-to-play-modal-box-content__close-button {
               color: $color-main;
               float: right;
-              font: {
-                size: 2.5vw;
-                weight: 700;
-              }
+              font-weight: 700;
             }
 
-              #close-button:hover {
-                -webkit-animation: fa-spin 2s infinite linear;
-                        animation: fa-spin 2s infinite linear;
-              }
-
-            .how-to-play-modal-box-content__close-button:hover, 
-            .how-to-play-modal-box-content__close-button:focus {
-              color: $color-hover;
-              cursor: pointer;
-              text-decoration: none;
+            .how-to-play-modal-box-content__heading {
+              text-align: center;
             }
+
+////////////////////////////// for mobile phones //////////////////////////////
+
+@media only screen and (max-width: 767px) {
+  
+  .header {
+    font-size: 1rem;
+  }
+
+  .player-1-section__player-1-name, 
+  .player-2-section__player-2-name {
+    font-size: 1.5rem;
+  }
+
+  .player-1-total-score, 
+  .player-2-total-score {
+    font-size: 1.25rem;
+  }
+
+  .player-1-current-score, 
+  .player-2-current-score {
+    font-size: 1rem;
+  }
+
+  .images-player-1__dice-1, 
+  .images-player-1__dice-2, 
+  .images-player-2__dice-1, 
+  .images-player-2__dice-2 {
+    height: 10vh;
+    width: auto;
+  }
+
+  .buttons-section__roll-dice-player-1, 
+  .buttons-section__roll-dice-player-2, 
+  .buttons-section__hold-points-player-1, 
+  .buttons-section__hold-points-player-2 {
+    font-size: 0.65rem;
+  }
+
+  .footer__set-final-score {
+    width: 10vw;
+    height: 3vh;
+    font-size: 1.5vw;
+  }
+
+  .footer-buttons {
+    font-size: 1rem;
+  }
+
+  .how-to-play-modal-box-content {
+    font-size: 0.75rem;
+  }
+
+  .how-to-play-modal-box-content__close-button {
+    font: {
+      size: 3vw;
+      weight: 700;
+    }
+  }
+
+}
+
+////////////////////////////// for tablets //////////////////////////////
+
+@media only screen and (min-width: 768px) {
+  
+  .header {
+    font-size: 1.25rem;
+  }
+
+  .player-1-section__player-1-name, 
+  .player-2-section__player-2-name {
+    font-size: 1.75rem;
+  }
+
+  .player-1-total-score, 
+  .player-2-total-score {
+    font-size: 1.5rem;
+  }
+
+  .player-1-current-score, 
+  .player-2-current-score {
+    font-size: 1.25rem;
+  }
+
+  .images-player-1__dice-1, 
+  .images-player-1__dice-2, 
+  .images-player-2__dice-1, 
+  .images-player-2__dice-2 {
+    height: 14vh;
+    width: auto;
+  }
+
+  .buttons-section__roll-dice-player-1, 
+  .buttons-section__roll-dice-player-2, 
+  .buttons-section__hold-points-player-1, 
+  .buttons-section__hold-points-player-2 {
+    font-size: 1rem;
+  }
+
+  .footer__set-final-score {
+    width: 12.5vw;
+    height: 4vh;
+    font-size: 1.75vw;
+  }
+
+  .footer-buttons {
+    font-size: 1.25rem;
+  }
+
+  .how-to-play-modal-box-content {
+    font-size: 0.95rem;
+  }
+
+  .how-to-play-modal-box-content__close-button {
+    font: {
+      size: 4vw;
+      weight: 700;
+    }
+  }
+
+}
+
+////////////////////////////// for desktop //////////////////////////////
+
+@media only screen and (min-width: 1200px) {
+  
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .player-1-section__player-1-name, 
+  .player-2-section__player-2-name {
+    font-size: 2rem;
+  }
+
+  .player-1-total-score, 
+  .player-2-total-score {
+    font-size: 1.75rem;
+  }
+
+  .player-1-current-score, 
+  .player-2-current-score {
+    font-size: 1.5rem;
+  }
+
+  .images-player-1__dice-1, 
+  .images-player-1__dice-2, 
+  .images-player-2__dice-1, 
+  .images-player-2__dice-2 {
+    height: 18vh;
+    width: auto;
+  }
+
+  .buttons-section__roll-dice-player-1, 
+  .buttons-section__roll-dice-player-2, 
+  .buttons-section__hold-points-player-1, 
+  .buttons-section__hold-points-player-2 {
+    font-size: 1.25rem;
+  }
+
+  .footer__set-final-score {
+    width: 15vw;
+    height: 5vh;
+    font-size: 2vw;
+  }
+
+  .footer-buttons {
+    font-size: 1.5rem;
+  }
+
+  .how-to-play-modal-box-content {
+    font-size: 1.1rem;
+  }
+
+  .how-to-play-modal-box-content__close-button {
+    font: {
+      size: 5vw;
+      weight: 700;
+    }
+  }
+
+}
+
+////////////////////////////// for non-touch screen devices (to eliminate hover effects trails) //////////////////////////////
+
+@media(hover: hover) and (pointer: fine) {
+
+  .buttons-section__roll-dice-player-1:hover, 
+  .buttons-section__roll-dice-player-2:hover, 
+  .buttons-section__hold-points-player-1:hover, 
+  .buttons-section__hold-points-player-2:hover {
+    color: $color-hover;
+    font-weight: 700;
+  }
+
+  .buttons-section__roll-dice-player-1:focus, 
+  .buttons-section__roll-dice-player-2:focus, 
+  .buttons-section__hold-points-player-1:focus, 
+  .buttons-section__hold-points-player-2:focus {
+    outline: none;
+  }
+
+  .footer__set-final-score:active, 
+  .footer__set-final-score:hover {
+    background-color: $bgcolor-secondary;	
+    color: $color-hover;
+  }
+
+  .footer-buttons__start-over:hover, 
+  .footer-buttons__how-to-play:hover {
+  color: $color-hover;
+  cursor: pointer;
+  font-weight: 700;
+  }
+
+  .footer-buttons__start-over:focus, 
+  .footer-buttons__how-to-play:focus {
+    outline: none;
+  }
+
+  #close-button:hover {
+    -webkit-animation: fa-spin 2s infinite linear;
+            animation: fa-spin 2s infinite linear;
+  }
+
+  .how-to-play-modal-box-content__close-button:hover, 
+  .how-to-play-modal-box-content__close-button:focus {
+    color: $color-hover;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+}
