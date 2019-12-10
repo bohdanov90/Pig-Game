@@ -21,7 +21,7 @@
   font-family: "Noto Serif", serif;
   font-size: 14px;
   height: 100vh;
-  min-width: 400px; }
+  min-width: 300px; }
 
 .header {
   display: -webkit-box;
@@ -190,7 +190,7 @@ h1 {
 
 .footer__set-final-score {
   background-color: #F8E7B1;
-  bottom: 11.25vh;
+  bottom: 14.5vh;
   color: #353535;
   left: 50%;
   position: absolute;
@@ -203,11 +203,11 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
   -ms-flex-pack: distribute;
   justify-content: center;
   padding: 3vh 3vw;
-  position: relative; }
+  position: relative;
+  width: 80%; }
 
 .footer-buttons__start-over,
 .footer-buttons__how-to-play {
@@ -217,22 +217,22 @@ h1 {
   cursor: pointer;
   margin: 1vh 1vw;
   padding: 1vh 1vw;
-  text-decoration: underline;
-  position: absolute; }
+  position: absolute;
+  text-decoration: underline; }
 
 .footer-buttons__start-over {
-  left: 20px;
-  bottom: 15px; }
+  bottom: 15px;
+  left: 20px; }
 
 .footer-buttons__how-to-play {
-  right: 20px;
-  bottom: 15px; }
+  bottom: 15px;
+  right: 20px; }
 
 .how-to-play-modal-box-container {
   bottom: 2.5vw;
   left: 2vw;
-  right: 2vw;
   position: fixed;
+  right: 2vw;
   top: 2.5vw;
   z-index: 1; }
 
@@ -245,8 +245,7 @@ h1 {
 .how-to-play-modal-box-content {
   background: url(../images/background.jpg) #F8E7B1;
   border: 1px solid #353535;
-  height: 75vh;
-  margin: 9vh 7vw;
+  height: 100vh;
   overflow: auto;
   padding: 2vh 2vw; }
 
@@ -281,7 +280,7 @@ ul {
   .images-player-1__dice-2,
   .images-player-2__dice-1,
   .images-player-2__dice-2 {
-    height: 10vh;
+    height: 7vh;
     width: auto; }
 
   .buttons-section__roll-dice-player-1,
@@ -291,18 +290,18 @@ ul {
     font-size: 0.65rem; }
 
   .footer__set-final-score {
-    width: 10vw;
-    height: 3vh;
-    font-size: 1.5vw; }
+    font-size: 4.5vw;
+    height: 5vh;
+    width: 15vw; }
 
   .footer-buttons {
     font-size: 1rem; }
 
   .how-to-play-modal-box-content {
-    font-size: 0.75rem; }
+    font-size: 0.9rem; }
 
   .how-to-play-modal-box-content__close-button {
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 700; } }
 @media only screen and (min-width: 768px) {
   .header {
@@ -334,15 +333,15 @@ ul {
     font-size: 1rem; }
 
   .footer__set-final-score {
-    width: 12.5vw;
+    font-size: 2.5vw;
     height: 4vh;
-    font-size: 1.75vw; }
+    width: 10vw; }
 
   .footer-buttons {
     font-size: 1.25rem; }
 
   .how-to-play-modal-box-content {
-    font-size: 0.95rem; }
+    font-size: 1.2rem; }
 
   .how-to-play-modal-box-content__close-button {
     font-size: 4vw;
@@ -377,18 +376,18 @@ ul {
     font-size: 1.25rem; }
 
   .footer__set-final-score {
-    width: 15vw;
+    font-size: 2vw;
     height: 5vh;
-    font-size: 2vw; }
+    width: 10vw; }
 
   .footer-buttons {
     font-size: 1.5rem; }
 
   .how-to-play-modal-box-content {
-    font-size: 1.1rem; }
+    font-size: 1.3rem; }
 
   .how-to-play-modal-box-content__close-button {
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 700; } }
 @media (hover: hover) and (pointer: fine) {
   .buttons-section__roll-dice-player-1:hover,

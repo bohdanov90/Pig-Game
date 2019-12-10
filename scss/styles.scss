@@ -47,7 +47,7 @@ $color-border: #90756A;
     size: 14px;
   }
   height: 100vh;
-  min-width: 400px;
+  min-width: 300px;
 }
 
   .header {
@@ -162,7 +162,7 @@ $color-border: #90756A;
 
     .footer__set-final-score {
       background-color: $bgcolor-main;
-      bottom: 11.25vh;
+      bottom: 14.5vh;
       color: $color-main;
       left: 50%;
       position: absolute;
@@ -176,11 +176,11 @@ $color-border: #90756A;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 80%;
       -ms-flex-pack: distribute;
           justify-content: center;
       padding: 3vh 3vw;
       position: relative;
+      width: 80%;
     }
     
       .footer-buttons__start-over, 
@@ -191,25 +191,25 @@ $color-border: #90756A;
         cursor: pointer;
         margin: 1vh 1vw;
         padding: 1vh 1vw;
-        text-decoration: underline;
         position: absolute;
+        text-decoration: underline;
       }
 
       .footer-buttons__start-over {
-        left: 20px;
         bottom: 15px;
+        left: 20px;
       }
 
       .footer-buttons__how-to-play {
-        right: 20px;
         bottom: 15px;
+        right: 20px;
       }
 
         .how-to-play-modal-box-container {
           bottom: 2.5vw;
           left: 2vw;
-          right: 2vw;
           position: fixed;
+          right: 2vw;
           top: 2.5vw;
           z-index: 1;
         }
@@ -225,8 +225,7 @@ $color-border: #90756A;
           .how-to-play-modal-box-content {
             background: url(../images/background.jpg) $bgcolor-main;
             border: 1px solid $color-main;
-            height: 75vh;
-            margin: 9vh 7vw;
+            height: 100vh;
             overflow: auto;
             padding: 2vh 2vw;
           }
@@ -272,7 +271,7 @@ $color-border: #90756A;
   .images-player-1__dice-2, 
   .images-player-2__dice-1, 
   .images-player-2__dice-2 {
-    height: 10vh;
+    height: 7vh;
     width: auto;
   }
 
@@ -284,9 +283,9 @@ $color-border: #90756A;
   }
 
   .footer__set-final-score {
-    width: 10vw;
-    height: 3vh;
-    font-size: 1.5vw;
+    font-size: 4.5vw;
+    height: 5vh;
+    width: 15vw;
   }
 
   .footer-buttons {
@@ -294,12 +293,12 @@ $color-border: #90756A;
   }
 
   .how-to-play-modal-box-content {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .how-to-play-modal-box-content__close-button {
     font: {
-      size: 3vw;
+      size: 5vw;
       weight: 700;
     }
   }
@@ -344,10 +343,10 @@ $color-border: #90756A;
     font-size: 1rem;
   }
 
-  .footer__set-final-score {
-    width: 12.5vw;
+  .footer__set-final-score {  
+    font-size: 2.5vw;
     height: 4vh;
-    font-size: 1.75vw;
+    width: 10vw;
   }
 
   .footer-buttons {
@@ -355,7 +354,7 @@ $color-border: #90756A;
   }
 
   .how-to-play-modal-box-content {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 
   .how-to-play-modal-box-content__close-button {
@@ -406,9 +405,9 @@ $color-border: #90756A;
   }
 
   .footer__set-final-score {
-    width: 15vw;
-    height: 5vh;
     font-size: 2vw;
+    height: 5vh;
+    width: 10vw;
   }
 
   .footer-buttons {
@@ -416,12 +415,12 @@ $color-border: #90756A;
   }
 
   .how-to-play-modal-box-content {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .how-to-play-modal-box-content__close-button {
     font: {
-      size: 5vw;
+      size: 4vw;
       weight: 700;
     }
   }
@@ -455,9 +454,9 @@ $color-border: #90756A;
 
   .footer-buttons__start-over:hover, 
   .footer-buttons__how-to-play:hover {
-  color: $color-hover;
-  cursor: pointer;
-  font-weight: 700;
+    color: $color-hover;
+    cursor: pointer;
+    font-weight: 700;
   }
 
   .footer-buttons__start-over:focus, 
