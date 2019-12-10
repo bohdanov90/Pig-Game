@@ -186,7 +186,8 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
   height: 20%;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .footer__set-final-score {
   background-color: #F8E7B1;
@@ -287,18 +288,21 @@ ul {
   .buttons-section__roll-dice-player-2,
   .buttons-section__hold-points-player-1,
   .buttons-section__hold-points-player-2 {
-    font-size: 0.65rem; }
+    font-size: 0.6rem; }
 
   .footer__set-final-score {
-    font-size: 4.5vw;
+    font-size: 1.5rem;
     height: 5vh;
-    width: 15vw; }
+    width: 25vw; }
+
+  .footer__set-final-score::placeholder {
+    font-size: 3vw; }
 
   .footer-buttons {
     font-size: 1rem; }
 
   .how-to-play-modal-box-content {
-    font-size: 0.9rem; }
+    font-size: 0.85rem; }
 
   .how-to-play-modal-box-content__close-button {
     font-size: 5vw;
@@ -333,9 +337,12 @@ ul {
     font-size: 1rem; }
 
   .footer__set-final-score {
-    font-size: 2.5vw;
-    height: 4vh;
-    width: 10vw; }
+    font-size: 1.75rem;
+    height: 5vh;
+    width: 25vw; }
+
+  .footer__set-final-score::placeholder {
+    font-size: 2.75vw; }
 
   .footer-buttons {
     font-size: 1.25rem; }
@@ -376,9 +383,12 @@ ul {
     font-size: 1.25rem; }
 
   .footer__set-final-score {
-    font-size: 2vw;
+    font-size: 2rem;
     height: 5vh;
-    width: 10vw; }
+    width: 25vw; }
+
+  .footer__set-final-score::placeholder {
+    font-size: 2vw; }
 
   .footer-buttons {
     font-size: 1.5rem; }
