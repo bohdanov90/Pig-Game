@@ -437,5 +437,8 @@ ul {
     color: #646464;
     cursor: pointer;
     text-decoration: none; } }
+@media (hover: none) and (pointer: coarse) {
+  .main {
+    height: calc(var($mobileVH, 1vh) * 100); } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -149,8 +149,19 @@ document.querySelector(".how-to-play-modal-box-content__close-button").onclick =
   document.querySelector(".how-to-play-modal-box-container").classList.remove("how-to-play-modal-box-container_is-visible");
 }
 
+// function for fixing viewport units on mobile devices
+function mobileViewportFix() {
+  let mobileVH = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("$mobileVH", `${mobileVH}px`);
+}
+
 // code for execution
 newGame();
 document.querySelector(".buttons-section__roll-dice-player-" + activePlayer).addEventListener("click", pressingRollDiceButton);
 document.querySelector(".footer-buttons__start-over").addEventListener("click", newGame);
 document.querySelector(".footer-buttons__how-to-play").addEventListener("click", gameRules);
+mobileViewportFix();
+// If resize happens applying viewport fix on mobile devices again
+window.addEventListener("resize", mobileViewportFix);
+
+
