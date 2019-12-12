@@ -155,13 +155,14 @@ function mobileViewportFix() {
   document.documentElement.style.setProperty("$mobileVH", `${mobileVH}px`);
 }
 
+
+//fixing viewport units on mobile devices
+mobileViewportFix();
+// If resize happens applying viewport fix on mobile devices again
+window.addEventListener("resize", mobileViewportFix);
+
 // code for execution
 newGame();
 document.querySelector(".buttons-section__roll-dice-player-" + activePlayer).addEventListener("click", pressingRollDiceButton);
 document.querySelector(".footer-buttons__start-over").addEventListener("click", newGame);
 document.querySelector(".footer-buttons__how-to-play").addEventListener("click", gameRules);
-mobileViewportFix();
-// If resize happens applying viewport fix on mobile devices again
-window.addEventListener("resize", mobileViewportFix);
-
-
