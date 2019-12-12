@@ -151,10 +151,8 @@ document.querySelector(".how-to-play-modal-box-content__close-button").onclick =
 
 // function for fixing viewport units on mobile devices
 function mobileViewportFix() {
-  let mobileVH = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("$mobileVH", `${mobileVH}px`);
+  document.documentElement.style.setProperty("--mobileVH", `${window.innerHeight * 0.01}px`);
 }
-
 
 //fixing viewport units on mobile devices
 mobileViewportFix();
