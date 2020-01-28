@@ -16,7 +16,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: url(../images/background.jpg) #F8E7B1;
+  background: linear-gradient(35deg, #F8E7B1, #BFA479);
   color: #353535;
   font-family: "Noto Serif", serif;
   font-size: 14px;
@@ -24,7 +24,8 @@
   height: 100vh;
   height: calc(var(--mobileVH, 1vh) * 100);
   min-width: 320px;
-  max-width: 1600px; }
+  max-width: 1600px;
+  z-index: 1; }
 
 .header {
   display: -webkit-box;
@@ -79,7 +80,7 @@ h1 {
   border: 1px dashed #90756A;
   height: 100%;
   padding: 1vh 1vw;
-  margin: 1vh 1vw;
+  margin: 1vh 2vw;
   text-align: center;
   width: 50%; }
 
@@ -200,7 +201,6 @@ h1 {
   position: absolute;
   text-align: center;
   -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
 .footer-buttons {
@@ -208,7 +208,8 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   padding: 3vh 3vw;
   position: relative;
   width: 100%; }
@@ -238,7 +239,7 @@ h1 {
   position: fixed;
   right: 2vw;
   top: 2.5vw;
-  z-index: 1; }
+  z-index: 2; }
 
 .how-to-play-modal-box-container_is-visible {
   visibility: visible; }
@@ -247,9 +248,9 @@ h1 {
   visibility: hidden; }
 
 .how-to-play-modal-box-content {
-  background: url(../images/background.jpg) #F8E7B1;
+  background: linear-gradient(35deg, #F8E7B1, #BFA479);
   border: 1px solid #353535;
-  height: 100vh;
+  height: 90vh;
   overflow: auto;
   padding: 2vh 2vw; }
 
@@ -298,6 +299,15 @@ ul {
     height: 5vh;
     width: 25vw; }
 
+  .footer__set-final-score::-webkit-input-placeholder {
+    font-size: 3vw; }
+
+  .footer__set-final-score:-ms-input-placeholder {
+    font-size: 3vw; }
+
+  .footer__set-final-score::-ms-input-placeholder {
+    font-size: 3vw; }
+
   .footer__set-final-score::placeholder {
     font-size: 3vw; }
 
@@ -305,7 +315,7 @@ ul {
     font-size: 1rem; }
 
   .how-to-play-modal-box-content {
-    font-size: 0.85rem; }
+    font-size: 0.8rem; }
 
   .how-to-play-modal-box-content__close-button {
     font-size: 5vw;
@@ -344,6 +354,15 @@ ul {
     height: 5vh;
     width: 25vw; }
 
+  .footer__set-final-score::-webkit-input-placeholder {
+    font-size: 2.75vw; }
+
+  .footer__set-final-score:-ms-input-placeholder {
+    font-size: 2.75vw; }
+
+  .footer__set-final-score::-ms-input-placeholder {
+    font-size: 2.75vw; }
+
   .footer__set-final-score::placeholder {
     font-size: 2.75vw; }
 
@@ -351,7 +370,7 @@ ul {
     font-size: 1.25rem; }
 
   .how-to-play-modal-box-content {
-    font-size: 1.2rem; }
+    font-size: 1.1rem; }
 
   .how-to-play-modal-box-content__close-button {
     font-size: 4vw;
@@ -390,6 +409,15 @@ ul {
     height: 5vh;
     width: 25vw; }
 
+  .footer__set-final-score::-webkit-input-placeholder {
+    font-size: 2vw; }
+
+  .footer__set-final-score:-ms-input-placeholder {
+    font-size: 2vw; }
+
+  .footer__set-final-score::-ms-input-placeholder {
+    font-size: 2vw; }
+
   .footer__set-final-score::placeholder {
     font-size: 2vw; }
 
@@ -397,7 +425,7 @@ ul {
     font-size: 1.5rem; }
 
   .how-to-play-modal-box-content {
-    font-size: 1.3rem; }
+    font-size: 1.2rem; }
 
   .how-to-play-modal-box-content__close-button {
     font-size: 4vw;
@@ -449,5 +477,3 @@ ul {
 
 }
 */
-
-/*# sourceMappingURL=styles.css.map */

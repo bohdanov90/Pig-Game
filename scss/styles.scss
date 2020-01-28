@@ -1,5 +1,6 @@
-$bgcolor-main: #F8E7B1;
+$bgcolor-main: linear-gradient(35deg, #F8E7B1, #BFA479);
 $bgcolor-secondary: #BFA479;
+$bg-set-final-score: #F8E7B1;
 $color-main: #353535;
 $color-hover: #646464;
 $color-winner: #b22222;
@@ -40,7 +41,7 @@ $color-border: #90756A;
 
 .main {
   @include flex-column-centered();
-  background: url(../images/background.jpg) $bgcolor-main;
+  background: $bgcolor-main;
   color: $color-main;
   font: {
     family: "Noto Serif", serif;
@@ -52,6 +53,7 @@ $color-border: #90756A;
   height: calc(var(--mobileVH, 1vh) * 100);
   min-width: 320px;
   max-width: 1600px;
+  z-index: 1;
 }
 
   .header {
@@ -78,7 +80,7 @@ $color-border: #90756A;
       border: 1px dashed $color-border;
       height: 100%;
       padding: 1vh 1vw;
-      margin: 1vh 1vw;
+      margin: 1vh 2vw;
       text-align: center;
       width: 50%;
     }
@@ -166,7 +168,7 @@ $color-border: #90756A;
   }
 
     .footer__set-final-score {
-      background-color: $bgcolor-main;
+      background-color: $bg-set-final-score;
       bottom: 14.5vh;
       color: $color-main;
       left: 50%;
@@ -216,7 +218,7 @@ $color-border: #90756A;
           position: fixed;
           right: 2vw;
           top: 2.5vw;
-          z-index: 1;
+          z-index: 2;
         }
 
         .how-to-play-modal-box-container_is-visible {
@@ -228,9 +230,9 @@ $color-border: #90756A;
         }
 
           .how-to-play-modal-box-content {
-            background: url(../images/background.jpg) $bgcolor-main;
+            background: $bgcolor-main;
             border: 1px solid $color-main;
-            height: 100vh;
+            height: 90vh;
             overflow: auto;
             padding: 2vh 2vw;
           }
@@ -302,7 +304,7 @@ $color-border: #90756A;
   }
 
   .how-to-play-modal-box-content {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .how-to-play-modal-box-content__close-button {
@@ -368,7 +370,7 @@ $color-border: #90756A;
   }
 
   .how-to-play-modal-box-content {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .how-to-play-modal-box-content__close-button {
@@ -433,7 +435,7 @@ $color-border: #90756A;
   }
 
   .how-to-play-modal-box-content {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .how-to-play-modal-box-content__close-button {
