@@ -7,36 +7,20 @@ $color-winner: #b22222;
 $color-border: #90756A;
 
 @mixin flex-column-centered() {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flex-row-centered() {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .main {
@@ -52,7 +36,7 @@ $color-border: #90756A;
   //fixing viewport units on mobile devices
   height: calc(var(--mobileVH, 1vh) * 100);
   min-width: 320px;
-  max-width: 1600px;
+  //max-width: 1600px;
   z-index: 1;
 }
 
@@ -384,7 +368,7 @@ $color-border: #90756A;
 
 ////////////////////////////// for desktop //////////////////////////////
 
-@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+@media only screen and (min-width: 1024px) {
   
   .header {
     font-size: 1.5rem;
