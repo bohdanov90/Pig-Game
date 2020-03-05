@@ -145,7 +145,7 @@ $color-border: #90756A;
         }
 
   .footer {
-    @include flex-row-centered();
+    @include flex-column-centered();
     height: 20%;
     width: 100%;
     position: relative;
@@ -234,6 +234,14 @@ $color-border: #90756A;
             .how-to-play-modal-box-content__heading {
               text-align: center;
             }
+
+    .footer-legal {
+      position: absolute;
+      width: 25vw;
+      left: 2vw;
+      top: 12vh;
+      font-style: italic;
+    }
 
 ////////////////////////////// for mobile phones //////////////////////////////
 

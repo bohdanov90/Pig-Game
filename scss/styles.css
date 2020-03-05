@@ -182,6 +182,10 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -263,6 +267,13 @@ ul {
 
 .how-to-play-modal-box-content__heading {
   text-align: center; }
+
+.footer-legal {
+  position: absolute;
+  width: 25vw;
+  left: 2vw;
+  top: 12vh;
+  font-style: italic; }
 
 @media only screen and (min-width: 320px) and (max-width: 680px) {
   .header {
