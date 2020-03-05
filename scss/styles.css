@@ -269,9 +269,9 @@ ul {
   text-align: center; }
 
 .footer-legal {
+  text-align: center;
   position: absolute;
-  width: 25vw;
-  left: 2vw;
+  width: 100vw;
   top: 12vh;
   font-style: italic; }
 
